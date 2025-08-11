@@ -5,6 +5,19 @@ from pydantic import BaseModel
 import os
 import random
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://*.vercel.app",
+        "https://dating-frontend-bice.vercel.app",  # твой точный домен фронта
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app = FastAPI(title="Dating API (MVP)")
 
 # Разрешаем фронтенду ходить на бэк
