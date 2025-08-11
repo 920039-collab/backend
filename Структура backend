@@ -1,0 +1,10 @@
+backend/
+│   main.py           # Основной файл FastAPI
+│   requirements.txt  # Зависимости
+│
+├── ai/
+│   ai_chat.py        # Генерация AI-подсказок для диалога
+│
+├── data/
+│   __init__.py
+│   storage.py        # Хранилище в памяти (MVP)
